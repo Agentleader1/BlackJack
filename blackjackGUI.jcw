@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>blackjackGUI</label>
+	</settings>
+	<users>
+		<user>
+			<path>blackjackGUI.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>blackjackGUI.jcp</path>
+		</project>
+	</projects>
+</workspace>
