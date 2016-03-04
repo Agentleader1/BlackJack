@@ -1,9 +1,3 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class - 
-//Lab  -
-
 package BlackJack;
 
 import java.awt.Component;
@@ -11,6 +5,8 @@ import java.awt.Component;
 import javax.swing.JFrame;
 
 public class FinalGameGraphicsRunner extends JFrame {
+
+	private static final long serialVersionUID = 3414745321474204948L;
 	private static final int WIDTH = 800;
 	private static final int HEIGHT = 600;
 
@@ -29,6 +25,6 @@ public class FinalGameGraphicsRunner extends JFrame {
 	}
 
 	public static void main(String args[]) {
-		FinalGameGraphicsRunner run = new FinalGameGraphicsRunner();
+		new FinalGameGraphicsRunner();
 	}
 }

@@ -14,10 +14,12 @@ public abstract class AbstractPlayer implements Playerable {
 	private int winCount;
 
 	public AbstractPlayer() {
+		// initializing data
 		hand = new ArrayList<>();
 	}
 
 	public AbstractPlayer(int score) {
+		// initializing data
 		this();
 		winCount = score;
 	}

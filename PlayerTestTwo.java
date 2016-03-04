@@ -1,5 +1,6 @@
 package BlackJack;
 //© A+ Computer Science  -  www.apluscompsci.com
+
 //Name -
 //Date -
 //Class -
@@ -8,21 +9,16 @@ package BlackJack;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
-import static java.lang.Character.*;
+import java.awt.event.KeyListener;
+
 import javax.swing.JPanel;
-import static java.lang.System.*;
 
-import BlackJack.Card;
-import BlackJack.Deck;
-import BlackJack.AbstractPlayer;
-import BlackJack.Player;
+@SuppressWarnings("unused")
+public class PlayerTestTwo extends JPanel implements KeyListener {
 
-public class PlayerTestTwo extends JPanel implements KeyListener
-{
-   private Deck deck;
+	private static final long serialVersionUID = -2255343514269475128L;
+	private Deck deck;
 	private Player player;
 	private Font font;
 	private boolean start;
@@ -30,56 +26,47 @@ public class PlayerTestTwo extends JPanel implements KeyListener
 	private boolean finish;
 	private boolean show;
 
-	public PlayerTestTwo()
-	{
+	public PlayerTestTwo() {
 		setBackground(Color.white);
 
-	   deck = new Deck();
+		deck = new Deck();
 		player = new Player();
 
-		font = new Font("TAHOMA",Font.BOLD,12);
+		font = new Font("TAHOMA", Font.BOLD, 12);
 
-		this.addKeyListener(this);    //starts the key thread running
+		this.addKeyListener(this); // starts the key thread running
 	}
 
-
-	public void paintComponent( Graphics window )
-	{
+	public void paintComponent(Graphics window) {
 		super.paintComponent(window);
-		
-		window.setColor( Color.blue );
-		window.setFont(font);
-		window.drawString("BlackJack Player Test", 25, 50 );
-		window.drawString("PRESS B to add cards to your hand.",25,100);
 
-		if(start==true)
-		{
-		   deck.shuffle();
+		window.setColor(Color.blue);
+		window.setFont(font);
+		window.drawString("BlackJack Player Test", 25, 50);
+		window.drawString("PRESS B to add cards to your hand.", 25, 100);
+
+		if (start == true) {
+			deck.shuffle();
 			player.addCardToHand(deck.nextCard());
 			player.addCardToHand(deck.nextCard());
-			start=false;
-			show=false;
+			start = false;
+			show = false;
 		}
-		
-		window.drawString("PLAYER ",50,365);
-		player.drawHand(window,0,365);
+
+		window.drawString("PLAYER ", 50, 365);
+		player.drawHand(window, 0, 365);
 	}
 
-
-   public void keyTyped(KeyEvent e)
-	{
-		if (e.getKeyChar() == 'b' || e.getKeyChar() == 'B')
-		{
-			start=true;
+	public void keyTyped(KeyEvent e) {
+		if (e.getKeyChar() == 'b' || e.getKeyChar() == 'B') {
+			start = true;
 			repaint();
 		}
 	}
 
-	public void keyPressed(KeyEvent e)
-	{
+	public void keyPressed(KeyEvent e) {
 	}
 
-   public void keyReleased(KeyEvent e)
-	{
+	public void keyReleased(KeyEvent e) {
 	}
 }
