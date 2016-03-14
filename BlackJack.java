@@ -9,21 +9,14 @@ package BlackJack;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
-import static java.lang.Character.*;
-import static java.lang.System.*;
+import java.awt.event.KeyListener;
+
 import javax.swing.JPanel;
 
-import BlackJack.Card;
-import BlackJack.BlackJackCard;
-import BlackJack.Deck;
-import BlackJack.AbstractPlayer;
-import BlackJack.Player;
-import BlackJack.Dealer;
-
 public class BlackJack extends JPanel implements KeyListener {
+
+	private static final long serialVersionUID = 208513541863098663L;
 	private Dealer dealer;
 	private Player player;
 	private boolean start;

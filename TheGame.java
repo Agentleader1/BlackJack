@@ -11,6 +11,8 @@ import java.awt.Component;
 import BlackJack.BlackJack;
 
 public class TheGame extends JFrame {
+
+	private static final long serialVersionUID = 1025547944673036181L;
 	private static final int WIDTH = 800;
 	private static final int HEIGHT = 600;
 
@@ -29,6 +31,6 @@ public class TheGame extends JFrame {
 	}
 
 	public static void main(String args[]) {
-		TheGame run = new TheGame();
+		new TheGame();
 	}
 }
