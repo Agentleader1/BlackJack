@@ -14,7 +14,7 @@ public abstract class AbstractPlayer implements Playerable {
 	private int winCount;
 
 	public AbstractPlayer() {
-		hand = new ArrayList<>();
+		hand = new ArrayList<Card>();
 	}
 
 	public AbstractPlayer(int score) {
